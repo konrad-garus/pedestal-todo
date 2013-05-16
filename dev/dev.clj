@@ -65,7 +65,7 @@
   server will serve one application at a time. The default port is
   3000. The default application is :{{name}}."
   ([]
-     (run 3000 :helloworld-app))
+     (run 3000 :todo-app))
   ([port config-name]
      (init port config-name)
      (start)))
