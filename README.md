@@ -1,6 +1,6 @@
 Very simple TODO application. Shows a form with one text input and a button. Clicking the button adds the text to list of TODOs and updates view.
 
-Pretty much all interesting source code is in app/src/todo_app/app.cljs. Contrary to Pedestal samples, this one has very rich explanations in comments.
+Pretty much all interesting source code is in [https://github.com/konrad-garus/pedestal-todo/blob/master/app/src/todo_app/app.cljs](app/src/todo_app/app.cljs). Contrary to Pedestal samples, this one has very rich explanations in comments.
 
 To launch the application, run the following:
 
