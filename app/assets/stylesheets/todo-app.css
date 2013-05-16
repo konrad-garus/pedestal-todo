@@ -1,0 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
+#todo-list {
+  list-style-type: none;
+}
