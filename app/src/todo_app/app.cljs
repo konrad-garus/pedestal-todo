@@ -32,7 +32,7 @@
 
 ; This function updates the data model in response to a message. It will be 
 ; triggered whenever a message appears in the :todo topic. The only accepted 
-; message in this implementatio has type :add and :value corresponding to the 
+; message in this implementation has type :add and :value corresponding to the 
 ; new todo text.
 (defn todo-transform [state message]
   (case (msg/type message)
