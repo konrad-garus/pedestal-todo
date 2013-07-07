@@ -63,8 +63,8 @@
 ; This defines operations on the data model. The :transform is triggered when
 ; something appears in the :todo queue. After the transform does its thing, 
 ; :emit is triggered in the same step (because it's also bound on :todo).
-(def count-app {:transform {:todo {:init nil :fn todo-transform}}
-                :emit {:emit {:fn todo-emit :input #{:todo}}}})
+(def todo-app {:transform {:todo {:init nil :fn todo-transform}}
+               :emit {:emit {:fn todo-emit :input #{:todo}}}})
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; APPLICATION MODEL ;;
@@ -106,7 +106,7 @@
                         [{msg/topic :todo msg/type :add :value text}])))))
 
 (defn ^:export main []
-  (let [app (app/build count-app)
+  (let [app (app/build todo-app)
         ; Plug in render-todos to changes in value at [:app :todos]
         render-fn (push/renderer "content" [[:value [:app :todos] render-todos]])]
     (render/consume-app-model app render-fn)
